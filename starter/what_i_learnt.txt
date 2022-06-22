@@ -1,0 +1,31 @@
+How to create fundamental game variables.
+How to generate a random number 
+How to manipulate the DOM
+How to read for the DOM
+How to change CSS styles
+
+textContent can be used interchangeably with innerHTML if you just want to change text. If you need to change the HTML you might need to use innerHTML. 
+
+The innerHTML text need to be in a string or else the JavaScript Parser will assume it is a piece of JS code and run it that way.
+Setters are used to set a value just like as in the case of Textcontent. 
+Getters are used to get values as in the case of assigning a variable as in: var x =  document.queryaSelector('#id').textContent;
+
+
+Events are notifications that notify our code that notify our code that something has happened on the website. 
+
+Event listeners are functions that perform an action when an event occurs. It waits for a specific event to happen. 
+
+EVENTS AND EVENT LISTENERS. 
+How to set up an event handler
+what a callback function is
+What an anonymous function is
+Another way to select elements by id
+How to change th eimage in an <img></img> element
+
+
+Learnt the tenary operator
+how to add remove and toggke HTML classes
+Tenary Operators are used instead of very simple if statements
+
+NEVER REPEAT YOURSELF!!!!
+The dont repeat yourself says its bad practice to repeat exactly the same code. 
