@@ -32,3 +32,9 @@ The dont repeat yourself says its bad practice to repeat exactly the same code.
 
 A STATE VARIABLE
 A state Variable is used to tell the condition of a system. 
+
+
+
+
+
+

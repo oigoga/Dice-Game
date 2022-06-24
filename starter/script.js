@@ -1,10 +1,18 @@
 var scores, roundScore, activePlayer, gamePlaying;
+function popup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
 function init() {
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
   document.querySelector('.dice').style.display = 'none';
-
+  
+  function popup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
   gamePlaying = true;
 
   document.getElementById('score-0').textContent = '0';
@@ -58,6 +66,17 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
   document.querySelector('#score-' + activePlayer).textContent =
     scores[activePlayer];
 
+
+  var input = document.querySelector('.final-score').value;
+  var winningScore;
+  // Undefined, 0, null or "" are coerced to false
+
+  if(input) {
+   winningScore = input;
+  } else {
+    winningScore = 100;
+  }
+
   // Check if player won the game.
   if (scores[activePlayer] >= 20) {
     document.querySelector('#name--' + activePlayer).textContent = 'Winner!!';
@@ -94,3 +113,12 @@ document.querySelector('.btn--new').addEventListener('click', init);
 
 // document.querySelector('.player--0').classList.remove('player--active');
 // document.querySelector('.player--1').classList.add('player--active');
+
+
+
+/*The game has 2 players, playing in rounds 
+-In each turn, a player rolls a dice as many times as he wishes. each result gets added to his Round score
+- If the player rolls one, All his round score gets lost. After that it is the next players turn
+-The player can choose to hold which means that his round score gets added to his global score. After that, it is the next player's turn
+- The first player to reach 100 points on Global score wins
+- You can also choose to input your final score to replace 100. */

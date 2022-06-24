@@ -9,6 +9,14 @@
     <title>Pig Game</title>
   </head>
   <body>
+    <div class="popup" onclick="popup()"><h1>Click me!</h1>
+      <span class="popuptext" id="myPopup">The game has 2 players, playing in rounds <br>
+        -In each turn, a player rolls a dice as many times as he wishes. each result gets added to his Round score <br>
+        - If the player rolls one, All his round score gets lost. After that it is the next players turn <br>
+        -The player can choose to hold which means that his round score gets added to his global score. After that, it is the next player's turn. <br>
+        - The first player to reach 100 points on Global score wins. <br>
+        - You can also choose to input your final score to replace 100.</span>
+    </div>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -27,13 +35,17 @@
         </div>
       </section>
 
-      <img src="./starter/dice-5.png" alt="Playing dice" class="dice" />
+      <img src="./starter/dice-5.png" alt="Playing dice" class="dice" id="dice-1" />
+      <img src="./starter/dice-5.png" alt="Playing dice" class="dice" id="dice-2"/>
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn-roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+
+      <input type="text" placeholder="Final Score" class="final-score">
+      <div id="circle"></div>
     </main>
-    <script src="./starter/script.js"></script> 
-    <!-- <script src="./starter/challenge.js"></script> -->
+    <!-- <script src="./starter/script.js"></script>  -->
+     <script src="./starter/challenge.js"></script> 
   </body>
 </html>
 
